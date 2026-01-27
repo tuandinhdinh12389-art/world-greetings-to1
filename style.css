@@ -1,0 +1,139 @@
+/* CSS cơ bản cho học sinh lớp 12 */
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #0056b3 url('anh/header_banner.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em;
+  /* Làm tiêu đề to hơn */
+}
+
+header p {
+  font-size: 1.5em;
+  /* Làm các dòng phụ to hơn */
+  margin: 10px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.country-card {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.country-card h2 {
+  color: #0056b3;
+  margin-top: 0;
+}
+
+/* Kiểu cho mục lục - Nhỏ gọn */
+.toc {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  min-width: 250px;
+}
+
+.toc h2 {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.toc a {
+  text-decoration: none;
+  color: #0056b3;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.country-card img {
+  width: 100%;
+  max-width: 600px;
+  /* Điều chỉnh kích thước ảnh */
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin: 10px 0;
+}
+
+.country-card p {
+  font-size: 1.1em;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Kiểu cho bảng so sánh */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.comparison-table th {
+  background-color: #cceeff;
+  /* Màu xanh nhạt cho tiêu đề */
+  color: #333;
+}
+
+.comparison-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #888;
+  background-color: #eee;
+  margin-top: 40px;
+}
+
+/* Đáp ứng trên điện thoại */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+}

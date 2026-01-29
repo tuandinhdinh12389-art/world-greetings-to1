@@ -1,94 +1,124 @@
-/* CSS cơ bản cho học sinh lớp 12 */
+/* 
+   Tối ưu hóa CSS cho bài tập Tin học 12 
+   Phong cách: Hiện đại, sạch sẽ, chuẩn SEO 
+*/
+
+:root {
+  --primary-color: #0056b3;
+  --bg-color: #f0f2f5;
+  --text-color: #333;
+  --white: #ffffff;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
 }
 
 header {
-  background: #0056b3 url('anh/header_banner.png') center/cover no-repeat;
-  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('anh/header_banner.png') center/cover no-repeat;
+  color: var(--white);
   text-align: center;
-  padding: 60px 20px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  padding: 80px 20px;
+  margin-bottom: 40px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 3em;
-  /* Làm tiêu đề to hơn */
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 header p {
-  font-size: 1.5em;
-  /* Làm các dòng phụ to hơn */
-  margin: 10px 0;
+  font-size: 1.25em;
+  margin: 15px 0 0;
+  opacity: 0.9;
 }
 
 .container {
-  width: 80%;
-  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto 40px;
 }
 
 .country-card {
-  background-color: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  background-color: var(--white);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
 }
 
 .country-card h2 {
-  color: #0056b3;
+  color: var(--primary-color);
   margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  font-size: 1.8em;
 }
 
-/* Kiểu cho mục lục - Nhỏ gọn */
+/* Mục lục hiện đại */
 .toc {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  min-width: 250px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
 }
 
 .toc h2 {
-  font-size: 1.1em;
-  margin-bottom: 5px;
+  font-size: 1.3em;
+  border: none;
 }
 
 .toc ul {
-  list-style-type: none;
-  padding-left: 0;
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 15px 25px;
 }
 
 .toc a {
   text-decoration: none;
-  color: #0056b3;
-  font-size: 0.9em;
-  font-weight: normal;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+
+.toc a:hover {
+  color: #003d80;
+  text-decoration: underline;
 }
 
 .country-card img {
   width: 100%;
-  max-width: 600px;
-  /* Điều chỉnh kích thước ảnh */
-  height: auto;
-  border-radius: 5px;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 20px 0;
   display: block;
-  margin: 10px 0;
 }
 
 .country-card p {
   font-size: 1.1em;
+  color: #555;
+  font-style: italic;
 }
 
 ul {
@@ -96,44 +126,120 @@ ul {
 }
 
 li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
-/* Kiểu cho bảng so sánh */
+li strong {
+  color: var(--primary-color);
+}
+
+/* Bảng so sánh chuyên nghiệp */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
 }
 
 .comparison-table th,
 .comparison-table td {
-  border: 1px solid #ddd;
-  padding: 12px;
+  padding: 16px;
   text-align: left;
+  border-bottom: 1px solid #eee;
 }
 
 .comparison-table th {
-  background-color: #cceeff;
-  /* Màu xanh nhạt cho tiêu đề */
-  color: #333;
+  background-color: #f1f5f9;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
 
-.comparison-table tr:nth-child(even) {
-  background-color: #fafafa;
+.comparison-table tr:last-child td {
+  border-bottom: none;
 }
 
-footer {
+.comparison-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.premium-footer {
+  background-color: #002c54; /* Màu xanh navy cao cấp */
+  color: var(--white);
+  padding: 0;
   text-align: center;
-  padding: 20px 0;
-  color: #888;
-  background-color: #eee;
-  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Đáp ứng trên điện thoại */
-@media (max-width: 600px) {
+.footer-top-bar {
+  height: 35px;
+  background-color: #f1f5f9; /* Thanh màu sáng phía trên giống ảnh mẫu */
+  width: 100%;
+}
+
+.footer-content {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-title {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-desc {
+  margin: 5px 0;
+  font-size: 1.1em;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.footer-author {
+  margin-top: 15px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #a5c9ff; /* Màu xanh nhạt để làm nổi bật tên người thực hiện */
+}
+
+/* Hiệu ứng mượt mà khi cuộn tới footer */
+.premium-footer::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-color); /* Vạch xanh đậm dưới thanh trắng */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 60px 15px;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+
   .container {
     width: 95%;
+  }
+
+  .country-card {
+    padding: 20px;
   }
 }
